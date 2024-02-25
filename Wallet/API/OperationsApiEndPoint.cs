@@ -15,7 +15,9 @@ namespace Wallet.API
         private int _counter;
         private readonly Guid _guid;
 
-        public OperationsApiEndPoint(IServiceProvider serviceProvider)
+        public OperationsApiEndPoint(
+            IServiceProvider serviceProvider
+            )
         {
             _serviceProvider = serviceProvider;
             _logger = _serviceProvider.GetRequiredService<ILogger<OperationsApiEndPoint>>();
